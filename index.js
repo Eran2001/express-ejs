@@ -9,9 +9,11 @@ app.set("view engine", "ejs");
 app.use("/", (req, res) => {
   res.render("index.ejs", {
     dayType: "weekend",
-    advice: "Take it easy!",
+    advice: "it's time to work hard!",
   });
 });
+
+console.log(new Date().getFullYear());
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
