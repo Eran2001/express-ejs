@@ -8,7 +8,8 @@
   </head>
   <body style="background-color: gray; min-height: 100vh">
     <%- include('header.ejs') %>
-    <form action="/" method="POST">
+    <p>Welcome, <%= name || "Guest" %>!</p>
+    <form action="/submit" method="POST">
       <input type="text" name="username" id="" />
       <input type="submit" value="Submit" />
     </form>
