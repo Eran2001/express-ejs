@@ -16,6 +16,8 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   const { username } = req.body;
+  console.log(username);
+
   res.render("index.ejs", { name: username });
 });
 
