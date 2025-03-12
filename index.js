@@ -4,9 +4,9 @@ const app = express();
 const port = 3000;
 
 app.use("/", (req, res) => {
-  res.render("./views/index.ejs", {
-    dayType: "a weekday",
-    advice: "it's time to work hard.",
+  res.render("index.ejs", {
+    dayType: "weekend",
+    advice: "Take it easy!",
   });
 });
 
