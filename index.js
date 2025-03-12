@@ -7,6 +7,8 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.use("/", (req, res) => {
+  const myList = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
   const date = new Date().getDay();
 
   let type = "a weekday";
@@ -20,6 +22,7 @@ app.use("/", (req, res) => {
   res.render("index.ejs", {
     dayType: type,
     advice: adv,
+    list: myList,
   });
 });
 
