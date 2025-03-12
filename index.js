@@ -7,13 +7,21 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.use("/", (req, res) => {
+  const date = new Date().getDay();
+
+  let type = "a weekday";
+  let adv = "it's time to work hard!";
+
+  if (date === 0 || date === 6) {
+    type = "a weekend";
+    adv = "it's time to work hard!";
+  }
+
   res.render("index.ejs", {
-    dayType: "weekend",
-    advice: "it's time to work hard!",
+    dayType: type,
+    advice: adv,
   });
 });
-
-console.log(new Date().getFullYear());
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
