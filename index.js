@@ -22,7 +22,6 @@ app.use("/", (req, res) => {
   res.render("index.ejs", {
     dayType: type,
     advice: adv,
-    list: myList,
   });
 });
 

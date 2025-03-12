@@ -9,11 +9,15 @@
   <body style="background-color: gray; min-height: 100vh">
     <%- include('header.ejs') %>
     <h1>He, it's <%= dayType %>, <%= advice %></h1>
+    <% if (list) { %>
     <ul>
       <% for (let i=0; i<list.length; i++) { %>
         <li><%= list[i] %></li>
         <% } %>
     </ul>
+    <% } else { %>
+    <p>No list items</p>
+    <% } %>
     <%- include('footer.ejs') %>
   </body>
 </html>
